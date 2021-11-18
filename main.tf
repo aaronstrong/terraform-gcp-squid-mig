@@ -9,9 +9,9 @@ data "google_compute_network" "network" {
 }
 
 data "google_compute_subnetwork" "subnetwork" {
-  name = var.subnetwork_name
+  name    = var.subnetwork_name
   network = local.vpc_network
-  region = var.region
+  region  = var.region
 }
 
 # -------------------------------------------------------------------
@@ -20,9 +20,9 @@ data "google_compute_subnetwork" "subnetwork" {
 
 locals {
   vpc_network = data.google_compute_network.network.name
-  vpc_id = data.google_compute_network.network.id
+  vpc_id      = data.google_compute_network.network.id
   subnet_name = data.google_compute_subnetwork.subnetwork.name
-  subnet_id = data.google_compute_subnetwork.subnetwork.id
+  subnet_id   = data.google_compute_subnetwork.subnetwork.id
 }
 
 # -------------------------------------------------------------------

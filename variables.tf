@@ -16,12 +16,12 @@ variable "gcp_credentials" {
 
 variable "vpc_name" {
   description = "The name of the VPC"
-  type = string  
+  type        = string
 }
 
 variable "subnetwork_name" {
   description = "The name of the subnetwork."
-  type = string
+  type        = string
 }
 
 # -------------------------------------------------------------------
@@ -69,6 +69,6 @@ variable "squid_install_script_path" {
 
 variable "fw_squid_port_source_range" {
   description = "The subnet ranges."
-  type = list
-  default = ["10.0.0.0/24"]  
+  type        = list
+  default     = ["10.0.0.0/24"]
 }
